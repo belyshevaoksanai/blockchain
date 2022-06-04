@@ -3,12 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "tsc": "tsc"
+    "start": "serve",
+    "compileDeploy": "tsc && npm run deploy",
+    "deploy": "copyfiles -f src/browser/*.html src/browser/*.css dist"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^17.0.35",
+    "copyfiles": "^2.4.1",
+    "serve": "^13.0.2",
     "typescript": "^4.7.2"
   }
 }
